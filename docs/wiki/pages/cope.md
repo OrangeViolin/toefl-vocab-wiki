@@ -1,0 +1,32 @@
+---
+id: cope
+type: word
+label: cope
+aliases: []
+tags: [TOEFL, 100句子]
+description: ''
+pronunciation: "/koʊp/"
+---
+
+# cope
+
+> **发音**：/koʊp/
+
+## 释义
+
+- vi. 处理；对付 记忆 事情处理（cope）得多了，眼界（scope）自然就会开阔起来 搭配 cope with sth. 对付、处理某事
+
+## 真实例句（来自《100个句子记完7000个托福单词》）
+
+- [[Sentence-91|Sentence 91]]
+
+## 📖 真实例句（100句书）
+
+> *「This was justified by the view that reflective practice could help teachers to feel more intellectually involved in their role and work in teaching and enable them to cope with the paucity of scientific fact and the uncertainty of knowledge in the discipline of teaching.」*
+> 这是合理的，因为人们认为反思实践可以帮助老师们更加理性地参与到他们的角色和所从事的教学工作中，使他们能够应对教学准则中科学事实的缺乏及知识的不确定性。
+>
+> — [[Sentence-91|Sentence 91]]
+
+## 导航
+
+- 📚 [[目录|返回首页]]

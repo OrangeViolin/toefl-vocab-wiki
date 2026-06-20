@@ -1,0 +1,248 @@
+:root {
+  /* Design tokens — global design tokens (dark theme)
+     @used-by: global design tokens (dark theme) */
+  --fg: #f0f6ff;
+  --fg-muted: #b8cce0;
+  --bg: #050d1a;
+  --bg-box: #080f1e;
+  --bg-nav: #030a14;
+  --accent: #4fc3f7;
+  --accent-dim: #0a3a5a;
+  --link: #e6c050;
+  --link-broken: #f85149;
+  --border: #0a1a2e;
+  --serif: "Noto Serif SC", serif;
+  --sans: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --bg-code: #080f1e;
+  --bg-table: #050d1a;
+  --bg-stripe: #070e1c;
+}
+
+/* Reset & body — global reset & base typography */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* Top navigation bar — top nav bar @used-by: js/core.js */
+.topnav {
+  background: var(--bg-nav);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.topnav-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: .6em 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.topnav .brand { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
+.topnav .crumb { color: var(--fg-muted); }
+.topnav .spacer { flex: 1; }
+.topnav-btn { background: none; border: none; cursor: pointer; font-size: inherit; font-family: inherit; padding: 0; color: inherit; }
+.topnav-btn.active { color: var(--accent); }
+/* Settings panel — reading settings panel @used-by: index.html + js/core.js */
+.settings-wrap { position: relative; }
+.settings-panel { position: absolute; top: calc(100% + 6px); right: 0; background: var(--bg-nav); border: 1px solid var(--border); border-radius: 4px; padding: .6em .9em; white-space: nowrap; box-shadow: 0 4px 12px rgba(0,0,0,.4); z-index: 100; min-width: 160px; }
+.setting-item { display: flex; align-items: center; gap: .5em; font-family: var(--sans); font-size: .88em; color: var(--fg); cursor: pointer; padding: .25em 0; user-select: none; }
+.setting-item select { font-size: inherit; background: var(--bg); color: var(--fg); border: 1px solid var(--border); border-radius: 3px; padding: 1px 4px; cursor: pointer; }
+.setting-item input[type="checkbox"] { cursor: pointer; accent-color: var(--accent); width: 14px; height: 14px; }
+.topnav-search { display: flex; align-items: center; }
+.topnav-search input {
+  width: 160px; padding: .3em .6em;
+  border: 1px solid var(--border);
+  border-radius: 4px; font-size: 13px;
+  font-family: var(--sans);
+  outline: none;
+  background: var(--bg-code);
+  color: var(--fg);
+}
+.topnav-search input:focus { border-color: var(--accent); width: 220px; transition: width .2s; }
+body.is-home .topnav-search { display: none; }
+.topnav .status { color: var(--fg-muted); font-style: italic; font-size: 12px; }
+.topnav-link { color: var(--fg-muted); text-decoration: none; white-space: nowrap; }
+.topnav-link:hover { color: var(--accent); }
+
+/* Page layout — 3-column article page layout @used-by: js/core.js */
+.page {
+  max-width: 1440px;
+  margin: 2em auto;
+  padding: 0 1.2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+@media (min-width: 1200px) {
+  .page { grid-template-columns: 240px minmax(0, 1fr) 380px; }
+  .page > .toc-sidebar { grid-column: 1; grid-row: 1; }
+  .page > article { grid-column: 2; grid-row: 1; }
+  .page > aside.sidebar { grid-column: 3; grid-row: 1; }
+}
+body.is-home .page {
+  grid-template-columns: 1fr;
+}
+body.is-home .page > article {
+  grid-column: 1;
+}
+body.is-home .toc-sidebar {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .toc-sidebar { display: none; }
+}
+
+article {
+  padding-left: 0;
+}
+
+/* Article headings — h1-h4 heading hierarchy & colors @used-by: js/core.js */
+article h1 {
+  font-size: 2em;
+  margin-top: 0;
+  padding-bottom: .3em;
+  border-bottom: 2px solid var(--accent);
+  color: var(--accent);
+  display: flex;
+  align-items: baseline;
+  gap: .5em;
+  flex-wrap: wrap;
+}
+article h1 .src-tab,
+article h1 .orig-tab {
+  font-size: .35em;
+  font-weight: 400;
+  font-family: var(--sans);
+  color: var(--fg-muted);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-left: auto;
+  white-space: nowrap;
+}
+article h1 .src-tab:first-of-type { margin-left: auto; }
+article h1 .src-tab + .src-tab,
+article h1 .src-tab + .orig-tab { margin-left: 0; }
+article h1 .src-tab:hover,
+article h1 .orig-tab:hover { color: var(--accent); border-color: var(--accent); }
+article h2 {
+  font-size: 1.35em;
+  margin-top: 1.8em;
+  padding-bottom: .2em;
+  border-bottom: 1px solid var(--border);
+  color: #60c8f0;
+  scroll-margin-top: 60px;
+}
+article h3 {
+  font-size: 1.1em;
+  margin-top: 1.4em;
+  color: #90cce8;
+  scroll-margin-top: 60px;
+}
+article h4 { font-size: 1em; margin-top: 1.2em; scroll-margin-top: 60px; }
+
+h1 a:not(.src-tab):not(.orig-tab),
+h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+}
+
+article p { margin: .75em 0; }
+article ul, article ol { padding-left: 1.8em; margin: .5em 0; }
+article li { margin: .25em 0; }
+
+/* Wikilinks — wikilink styles @used-by: js/core.js */
+article a { color: var(--link); text-decoration: none; }
+article a:hover { text-decoration: underline; }
+article a.wikilink.broken { color: var(--link-broken); }
+article a.wikilink.self { color: var(--fg-muted); cursor: default; pointer-events: none; }
+
+/* Tags — entity tags @used-by: js/core.js */
+.entity-tags { text-align: left; margin-top: .5em; }
+footer .entity-tags { text-align: center; }
+.tag-label { font-weight: 700; color: var(--fg-muted); font-size: .85em; font-family: var(--sans); }
+
+.infobox a { color: var(--link); text-decoration: none; }
+.infobox a:hover { text-decoration: underline; }
+.infobox a.wikilink.broken { color: var(--link-broken); }
+
+/* Blockquote — blockquote @used-by: js/core.js */
+article blockquote {
+  margin: 1em 0;
+  padding: .5em 1em;
+  border-left: 3px solid var(--accent-dim);
+  background: var(--bg-box);
+  color: var(--fg-muted);
+  border-radius: 0 4px 4px 0;
+}
+article blockquote p { margin: .3em 0; }
+
+/* Code & pre — inline code & code blocks @used-by: js/core.js */
+article code {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: .1em .4em;
+  font-size: .88em;
+  font-family: "Roboto Mono", monospace;
+  color: #7ecfff;
+}
+article pre code {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+/* Tables — article tables @used-by: js/core.js */
+article table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: .92em;
+  font-family: var(--sans);
+  border: 1px solid #a0c8e8;
+}
+article th { background: #0c1e38; color: var(--accent); padding: .5em .8em; border: 1px solid #a0c8e8; text-align: left; }
+article td { padding: .4em .8em; border: 1px solid #a0c8e8; }
+article tr:nth-child(odd) td { background: var(--bg-table); }
+article tr:nth-child(even) td { background: var(--bg-stripe); }
+/* 个别列需要 nowrap 请用类名覆盖，不再全局设置 */
+
+article hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+
+article img { max-width: 100%; border-radius: 4px; }
+
+/* See also — see-also section at article bottom @used-by: js/core.js */
+.seealso-block {
+  margin: .8em 0;
+  padding: .4em .8em;
+  background: rgba(79, 195, 247, 0.06);
+  border-left: 3px solid #1a78a0;
+  border-radius: 0 3px 3px 0;
+  font-size: .93em;
+}
+.seealso-label {
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 .4em 0 0;
+  display: inline;
+}
+p.seealso-block { margin: .8em 0; }
+p.seealso-block .seealso-label { display: inline; }
+.seealso-block ul { margin: .2em 0 0 0; padding-left: 1.4em; }
+.seealso-block li { margin: .15em 0; }

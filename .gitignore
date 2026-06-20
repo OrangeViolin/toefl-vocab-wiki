@@ -1,0 +1,73 @@
+# ============================================================
+# Wiki 项目 .gitignore 通用模板
+# 适用于 MEMEX_ROOT 共享架构
+# ============================================================
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+package.json
+package-lock.json
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# 临时文件
+tmp/
+*.tmp
+
+# 运行时锁文件
+*.lock
+logs/butler/*.lock
+.claude/scheduled_tasks.lock
+
+# 运行时日志
+*.log
+logs/butler/*.log
+logs/wiki-server.log
+
+# 私有内容（草稿、本地笔记等）
+private/
+
+# Claude Code 本地覆盖（用户专属，不提交）
+.claude/worktrees/
+.claude/settings.local.json
+
+# ============================================================
+# ⚠️  必须跟踪（MUST-TRACK）：以下路径禁止出现在 .gitignore 中
+# ============================================================
+# 下列路径及其子路径必须被 git 跟踪，禁止用 .gitignore 排除整目录。
+# 如需豁免（如排除 corpus/ 下特定版权文件），须在 LAW.md 写明理由，
+# 且只能使用精确路径规则（如 corpus/raw/secret.pdf），禁止通配整目录。
+#
+# 禁止 gitignore 的路径：
+#   local/                   — wiki 本地配置（CONSTITUTION §0.2 明确要求 git 跟踪）
+#   ref/                     — RFC 文件、规范文档
+#   logs/rfc/                — RFC 实施日志
+#   logs/daily/              — 每日工作日志
+#   logs/butler/queue.md     — butler 任务队列（注：logs/butler/*.log 可忽略，整目录不可忽略）
+#   corpus/                  — 原始语料（跟踪模式见 BIRTH.spec 0-B：「语料跟踪模式选择」）
+#                               public-domain 模式：必须跟踪，禁止 gitignore
+#                               copyrighted 模式：排除 corpus/raw/**，在 LAW.md 写明版权理由
+# 版权保护语料，不提交
+corpus/raw/*.epub
+#   data/sentence_index/     — 句子级索引（核心数据资产）
+#   CLAUDE.md                — Claude 入口配置
+#   LAW.md                   — 本地法律
+#   CHANGELOG.md             — 变更日志
+#   README.md                — 项目说明
+#   BIOS.md                  — wiki 建设记录
+#   .gitignore               — 本文件本身
+# ============================================================

@@ -1,0 +1,18 @@
+# memex Python 依赖清单（模板）
+# 新 wiki 孵化时（/egg）自动复制为 requirements.txt
+# 按需取消注释，运行 pip install -r requirements.txt
+
+# ── CJK wiki 必装（中文/日文/韩文）────────────
+pypinyin          # CJK slug → 拼音桶名（page_bucket.py）
+#                   # 缺失时回退到 hex 桶名，可能导致桶名不一致
+
+# ── epub 来源 wiki ────────────────────────────
+# Pillow            # epub 插图提取（extract_epub_images.py）
+# lxml              # epub 结构解析（部分预处理脚本）
+
+# ── 数据分析 / 质量评估 ────────────────────────
+# numpy             # 部分统计脚本
+# jieba             # 中文分词（质量评估相关）
+
+# ── PDF 来源 wiki ─────────────────────────────
+# PyMuPDF           # PDF 文本提取（替代 pdftotext）

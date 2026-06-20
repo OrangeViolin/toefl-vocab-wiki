@@ -1,0 +1,18 @@
+/* Quality badges — search result quality badges @used-by: js/core.js */
+.res-quality { border-radius: 3px; padding: 1px 5px; font-size: .82em; font-weight: 500; font-family: var(--sans); white-space: nowrap; }
+.res-quality-premium  { background: #e9d8fd; color: #553c9a; }
+.res-quality-featured { background: #bee3f8; color: #2b6cb0; }
+.res-quality-standard { background: #c6f6d5; color: #276749; }
+.res-quality-basic    { background: #fefcbf; color: #744210; }
+.res-quality-stub     { background: #fed7d7; color: #822727; }
+
+/* Page quality — article page quality badges @used-by: js/core.js */
+.page-quality,
+.page-quality-score {
+  border-radius: 3px; padding: 0 5px; font-size: .82em; font-weight: 500;
+  font-family: var(--sans); white-space: nowrap; vertical-align: middle;
+}
+.page-quality-premium  { background: #e9d8fd; color: #553c9a; }
+.page-quality-featured { background: #bee3f8; color: #2b6cb0; }
+.page-quality-standard { background: #c6f6d5; color: #276749; }
+.page-quality-score    { background: #e2e8f0; color: #4a5568; margin-left: 3px; }

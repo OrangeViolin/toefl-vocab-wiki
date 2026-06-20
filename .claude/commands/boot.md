@@ -1,0 +1,1 @@
+/Users/mac/memex/.claude/commands/boot.md

@@ -1,0 +1,11 @@
+/* Card type accent palette — card type accent colors @used-by: js/core.js */
+.card-t-person       { --card-accent: #4fc3f7; }
+.card-t-concept      { --card-accent: #29b6f6; }
+.card-t-event        { --card-accent: #26c6da; }
+.card-t-system       { --card-accent: #42a5f5; }
+.card-t-theory       { --card-accent: #5c6bc0; }
+.card-t-chapter      { --card-accent: #26a69a; }
+.card-t-organization { --card-accent: #7e57c2; }
+.card-t-overview     { --card-accent: #26c6da; }
+.card-t-list         { --card-accent: #455a64; }
+

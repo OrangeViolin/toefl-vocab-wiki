@@ -1,0 +1,12 @@
+/* Category / type badges — entity type badges on home/search/article pages
+   @used-by: js/core.js */
+.type-badge {
+  display: inline-block;
+  padding: .15em .5em;
+  border-radius: 3px;
+  font-size: .78em;
+  font-family: var(--sans);
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid var(--accent-dim);
+}

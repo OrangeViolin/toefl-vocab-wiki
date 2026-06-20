@@ -1,0 +1,33 @@
+/* Chapter prev/next nav — chapter prev/next nav @used-by: js/core.js */
+.chapnav {
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  padding: .6em 0;
+  margin: .8em 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-family: var(--sans);
+  font-size: .88em;
+}
+.chapnav a, .chapnav span { text-decoration: none; padding: .3em .6em; border-radius: 4px; }
+.chapnav-prev { margin-right: auto; }
+.chapnav-next { margin-left: auto; }
+.chapnav a { color: var(--accent); border: 1px solid var(--border); }
+.chapnav a:hover { background: var(--bg-box); }
+.chapnav-disabled { color: var(--fg-muted); }
+.chapnav-toc { color: var(--fg-muted) !important; font-size: .85em; border: 1px solid var(--border); }
+.chapnav-toc:hover { background: var(--bg-box); color: var(--fg) !important; }
+
+/* Reading progress bar — article reading progress bar @used-by: js/core.js */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #90d8ff);
+  z-index: 100;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+body.is-home .reading-progress { display: none; }
