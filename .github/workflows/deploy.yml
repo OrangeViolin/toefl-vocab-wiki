@@ -15,11 +15,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Prepare publish directory (resolve symlinks)
+        run: |
+          cp -rL docs/wiki/public _site
+          touch _site/.nojekyll
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/wiki/public
+          publish_dir: _site
           publish_branch: gh-pages
           force_orphan: true
           enable_jekyll: false
