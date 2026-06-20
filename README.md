@@ -19,6 +19,9 @@
 
 基于 [Memex Wiki 引擎](https://github.com/baojie/memex)，纯静态部署于 GitHub Pages。
 
+🌐 **在线访问**：[orangeviolin.github.io/toefl-vocab-wiki](https://orangeviolin.github.io/toefl-vocab-wiki/)
+📦 **GitHub 仓库**：[OrangeViolin/toefl-vocab-wiki](https://github.com/OrangeViolin/toefl-vocab-wiki)
+
 ## 本地开发
 
 ```bash
