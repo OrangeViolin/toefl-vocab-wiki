@@ -1,0 +1,65 @@
+/* Diff view — Special:Diff diff comparison @used-by: js/core.js */
+.diff-meta {
+  background: var(--bg-box);
+  padding: .8em 1em;
+  border-radius: 4px;
+  margin: 1em 0 1.5em;
+  font-family: var(--sans);
+  font-size: .9em;
+  line-height: 1.6;
+}
+.diff-meta code { background: var(--bg); padding: 1px 4px; border-radius: 2px; font-size: .88em; }
+.diff-meta .diff-summary { margin-top: .4em; color: var(--fg-muted); }
+.diff-added   { color: #3fb950; font-weight: 600; }
+.diff-removed { color: #f85149; font-weight: 600; }
+.diff-body {
+  font-family: "Roboto Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow-x: auto;
+}
+.diff-line {
+  display: flex;
+  padding: 1px 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.diff-sign {
+  flex: 0 0 1.5em;
+  color: var(--fg-muted);
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+.diff-text { flex: 1; }
+.diff-same { background: var(--bg); color: var(--fg); }
+.diff-add  { background: #071a0d; color: #4a7a55; }
+.diff-add .diff-sign  { color: #3fb950; font-weight: 600; }
+.diff-add .diff-char  { background: #1a5c2e; color: #8cc98f; border-radius: 2px; padding: 0 1px; }
+.diff-del  { background: #1a0709; color: #7a4a4a; }
+.diff-del .diff-sign  { color: #f85149; font-weight: 600; }
+.diff-del .diff-char  { background: #5c1c1c; color: #c98b8b; border-radius: 2px; padding: 0 1px; }
+.sep { color: var(--border); margin: 0 .4em; }
+
+/* Year nav — timeline year navigation @used-by: js/core.js */
+.year-nav {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border, #d8d2bf);
+  text-align: center;
+  font-size: 1.1em;
+}
+.year-nav-link {
+  color: var(--accent, #4fc3f7);
+  text-decoration: none;
+  padding: 0.3em 0.6em;
+}
+.year-nav-link:hover {
+  text-decoration: underline;
+}
+.year-nav-sep {
+  color: var(--fg-muted, #888);
+  padding: 0 0.5em;
+}

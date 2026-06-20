@@ -1,0 +1,74 @@
+/* local.css — wiki-specific style overrides */
+/* Loaded after all engine styles, so rules here take precedence */
+
+/* Ensure hidden attribute works (belt-and-suspenders) */
+[hidden] { display: none !important; }
+
+/* Brand colors */
+:root {
+  --brand-primary: #1a5632;
+  --brand-accent: #c44536;
+}
+
+/* A-Z page word grid */
+.az-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin: 8px 0;
+}
+.az-item {
+  display: inline-block;
+  min-width: 120px;
+}
+
+/* Word List grid */
+.wl-grid {
+  width: 100%;
+  border-collapse: collapse;
+}
+.wl-grid td {
+  text-align: center;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color, #ddd);
+  width: 16.6%;
+}
+.wl-grid td a {
+  font-weight: 600;
+}
+.wl-grid td small {
+  color: var(--text-secondary, #888);
+  font-size: 0.8em;
+}
+
+/* Hide Source/History tabs on overview/list pages */
+article[data-type="overview"] .src-tab,
+article[data-type="list"] .src-tab {
+  display: none;
+}
+
+/* Hide Source/History tabs — vocabulary wiki doesn't need them */
+.src-tab {
+  display: none !important;
+}
+
+/* Better looking blockquote */
+blockquote {
+  background: var(--bg-secondary, #f8f8f5);
+  border-left: 3px solid var(--brand-primary, #1a5632);
+  padding: 8px 16px;
+  margin: 12px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Word page: better spacing for sections */
+#article h2 {
+  margin-top: 28px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border-color, #e0e0e0);
+}
+
+/* Navigation section at bottom */
+#article h2:last-of-type {
+  border-bottom: none;
+}

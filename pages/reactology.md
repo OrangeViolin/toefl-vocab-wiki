@@ -1,0 +1,31 @@
+---
+id: reactology
+type: word
+label: reactology
+aliases: []
+tags: [TOEFL, 100句子]
+description: ''
+pronunciation: "/rɪæk'tɑːlədʒi/"
+---
+
+# reactology
+
+> **发音**：/rɪæk'tɑːlədʒi/
+
+## 释义
+
+- n. 反应学 同根 react vi. 反应
+
+## 真实例句（来自《100个句子记完7000个托福单词》）
+
+- [[Sentence-67|Sentence 67]]
+
+## 📖 真实例句（100句书）
+
+> *「The question of why infantile amnesia occurs has intrigued psychologists for decades, especially in light of ample evidence that infants and young children can display impressive memory capabilities.」*
+>
+> — [[Sentence-67|Sentence 67]]
+
+## 导航
+
+- 📚 [[目录|返回首页]]

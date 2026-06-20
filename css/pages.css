@@ -1,0 +1,86 @@
+/* Special pages — special pages general @used-by: js/core.js */
+.special-page h1 { color: var(--accent); }
+.page-list { list-style: none; padding: 0; columns: 2; }
+.page-list li { padding: .2em 0; }
+@media (max-width: 700px) { .page-list { columns: 1; } }
+
+/* Category page — category page card grid @used-by: js/core.js */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .6em;
+  margin-top: 1em;
+}
+.category-card {
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: .6em .8em;
+}
+.category-card a { color: var(--link); text-decoration: none; }
+.category-card a:hover { text-decoration: underline; }
+.category-card .card-type { font-size: .75em; color: var(--fg-muted); }
+
+/* Recent changes table — Special:Recent changes table @used-by: js/core.js */
+.recent-list { list-style: none; padding: 0; }
+.recent-list li { padding: .4em 0; border-bottom: 1px solid var(--border); font-family: var(--sans); font-size: .92em; }
+.recent-ts { color: var(--fg-muted); font-size: .82em; }
+.rc-size { font-family: var(--sans); font-size: .85em; text-align: right; white-space: nowrap; font-weight: 600; }
+.rc-size-plus  { color: #2a7a2a; }
+.rc-size-minus { color: #c0392b; }
+.rc-size-zero  { color: var(--fg-muted); font-weight: 400; }
+.rc-size-mixed { color: var(--fg); }
+.rc-plus  { color: #2a7a2a; }
+.rc-minus { color: #c0392b; }
+
+table.recent-changes { width: 100%; border-collapse: collapse; font-family: var(--sans); }
+table.recent-changes th { text-align: left; padding: .4em .6em; border-bottom: 2px solid var(--border); color: var(--accent); white-space: nowrap; }
+table.recent-changes td { padding: .45em .6em; border-bottom: 1px solid var(--border); vertical-align: top; }
+.rc-time   { white-space: nowrap; color: var(--fg-muted); font-size: .85em; }
+.rc-page   { white-space: nowrap; max-width: 12em; overflow: hidden; text-overflow: ellipsis; }
+.rc-author { white-space: nowrap; }
+.rc-summary { max-width: 28em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--fg-muted); font-size: .85em; }
+.rc-rev    { white-space: nowrap; font-size: .82em; color: var(--fg-muted); }
+.rc-lc     { text-align: right; white-space: nowrap; font-size: .85em; color: var(--fg-muted); }
+.rc-diff   { white-space: nowrap; font-size: .85em; }
+.rc-badge-latest { display: inline-block; margin-left: .35em; padding: 0 .4em; font-size: .72em; font-weight: 600; background: var(--accent); color: var(--bg, #111); border-radius: 3px; vertical-align: middle; line-height: 1.5; }
+table.recent-changes.hist .rc-summary { max-width: none; white-space: normal; color: var(--fg); }
+table.recent-changes.hist .rc-time    { color: var(--fg); }
+
+/* Redirect notice — redirect notice bar @used-by: js/core.js */
+.redirect-notice {
+  background: var(--bg-box);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .4em .8em;
+  font-size: .9em;
+  font-family: var(--sans);
+  color: var(--fg-muted);
+  margin-bottom: 1em;
+}
+.redirect-notice a { color: var(--link); }
+.redirect-arrow { margin-right: .4em; color: var(--accent); }
+
+/* Error & loading — status indicators @used-by: js/core.js */
+.error { color: var(--link-broken); }
+.loading { color: var(--fg-muted); font-style: italic; }
+
+/* Footer — page footer @used-by: js/core.js */
+footer {
+  max-width: 1440px;
+  margin: 3em auto 1.5em;
+  padding: 0 1.2em;
+  font-size: .83em;
+  color: var(--fg-muted);
+  font-family: var(--sans);
+  border-top: 1px solid var(--border);
+  padding-top: 1em;
+  text-align: center;
+}
+
+.footer-license {
+  display: block;
+  margin-top: .5em;
+  text-align: center;
+}
+.footer-license a { color: var(--link); }

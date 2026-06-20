@@ -1,0 +1,31 @@
+---
+id: minivan
+type: word
+label: minivan
+aliases: []
+tags: [TOEFL, 100句子]
+description: ''
+pronunciation: "/ˈmɪnivæn/"
+---
+
+# minivan
+
+> **发音**：/ˈmɪnivæn/
+
+## 释义
+
+- n. 小型面包车
+
+## 真实例句（来自《100个句子记完7000个托福单词》）
+
+- [[Sentence-29|Sentence 29]]
+
+## 📖 真实例句（100句书）
+
+> *「When Henry Ford first sought financial backing for making cars, the very notion of farmers and clerks owning automobiles was considered ridiculous.」*
+>
+> — [[Sentence-29|Sentence 29]]
+
+## 导航
+
+- 📚 [[目录|返回首页]]

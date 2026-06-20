@@ -1,0 +1,39 @@
+/* Source view — Special:Source view @used-by: js/core.js */
+.src-pre {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  word-wrap: break-word !important;
+  overflow-x: auto;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1em;
+  font-size: .88em;
+  line-height: 1.6;
+}
+.src-pre code {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  word-wrap: break-word !important;
+}
+/* Frontmatter border — frontmatter block top border color @used-by: js/core.js */
+.src-pre.src-fm {
+  border-top: 3px solid #6e9ef5;
+  margin-bottom: .25em;
+}
+/* Container syntax — ::: container syntax highlighting @used-by: js/core.js */
+.src-container-fence {
+  color: #e3b341;
+  font-weight: 600;
+}
+.source-view {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1em;
+  white-space: pre-wrap;
+  font-family: "Roboto Mono", monospace;
+  font-size: .88em;
+  overflow-x: auto;
+  color: #c9d1d9;
+}
